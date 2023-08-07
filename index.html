@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook App</title>
+    <link rel="shortcut icon" href="assets/img/meal.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/splide.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+    <div class="main-wrapper flex column">
+        <header class="header">
+            <div class="container flex flex-center justify-between">
+                <h3 class="header-logo">
+                    CookApp
+                </h3>
+                <div class="search-panel flex flex-center justify-center">
+                    <input type="text" class="input" id="search-term" placeholder="Enter key word...">
+                    <button class="btn search-btn" id="search-btn">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="fav-meals">
+                <div class="container">
+                    <h2 class="section-heading">
+                        Your Favorite  
+                        <i class="fa-solid fa-heart"></i>
+                    </h2>
+                    <div class="fav-meals-wrapper splide">
+                        <div class="splide__track">
+                            <ul class="fav-meals-list splide__list" id="favList"></ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="meals">
+                <div class="container">
+                    <h2 class="section-heading">
+                        Your Recipe
+                    </h2>
+                    <div class="meal-wrapper flex justify-center wrap" id="meals"></div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container flex flex-center justify-between">
+                <p class="footer-link">
+                    Data from <a href="https://www.themealdb.com/" target="_blank">themealdb.com</a>
+                </p>
+                <p class="footer-link">
+                    by <a href="https://redhatdev16.github.io/portfolio/" target="_blank">redhatdev16</a> 2022
+                </p>
+            </div>
+        </footer>
+
+        <div class="popup-container" id="meal-popup">
+            <div class="popup">
+                <button class="btn popup-close-btn" id="close-popup">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="meal-info" id="meal-info"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/splide.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
